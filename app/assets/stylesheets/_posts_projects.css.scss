@@ -1,0 +1,24 @@
+#posts_wrapper {
+  padding: 3em 0;
+  .post {
+    text-align: center;
+    h2 {
+      margin: 0;
+      font-size: 2em;
+      text-transform: uppercase;
+      a {
+        text-decoration: none;
+        color: #424242;
+        &:hover {
+          color: #8bc6db;
+        }
+      }
+    }
+    .date {
+      font-size: .9em;
+    }
+    hr {
+      margin: 3em auto;
+    }
+  }
+}
