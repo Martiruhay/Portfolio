@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   # before action 
   
   def index
+    # Will paginate(?)
+    @posts = Post.all
   end
   
   def new

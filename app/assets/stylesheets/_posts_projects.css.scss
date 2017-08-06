@@ -2,23 +2,64 @@
   padding: 3em 0;
   .post {
     text-align: center;
+    .date {
+      font-size: .9em;
+      margin: 0;
+    }
     h2 {
       margin: 0;
       font-size: 2em;
       text-transform: uppercase;
       a {
         text-decoration: none;
-        color: #424242;
+        color: $dark;
         &:hover {
-          color: #8bc6db;
+          color: $highlight;
         }
       }
     }
-    .date {
-      font-size: .9em;
-    }
     hr {
       margin: 3em auto;
+    }
+  }
+}
+
+
+// Post Show
+
+#post_show_content {
+  header {
+    text-align: center;
+  }
+  .date {
+    font-size: .9em;
+    color: $light;
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+  }
+  hr {
+    margin: 2em auto;
+  }
+}
+
+#share_box {
+  text-align: center;
+  p {
+    padding: 0 0 1em 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: .8em;
+    text-transform: uppercase;
+    color: $dark;
+  }
+  i {
+    color: $dark;
+    padding: 1em 1em;
+    &:hover {
+      color: $highlight;
+      cursor: pointer;
     }
   }
 }

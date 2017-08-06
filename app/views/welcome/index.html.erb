@@ -1,0 +1,28 @@
+<div class="wrapper clearfix">
+  <div class="col-1 homepage-content">
+    <h2>About</h2>
+    <hr>
+    <p>I am a software engineering student, a shitty developer and an indie 
+    videogame developer in the free time.</p>
+    <p>I am also in love with music, being my favourite styles Black Metal 
+    and Progressive Metal</p>
+  </div>
+  <div class="col-2 homepage-content">
+    <h2>Things I write</h2>
+    <hr>
+    
+    <% @posts.each do |post| %>
+      <h3><%= link_to post.title, post %></h3>
+      <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
+    
+  </div>
+  <div class="col-3 homepage-content">
+    <h2>Projects I built</h2>
+    <hr>
+    <h3>Glitch Grid</h3>
+    <p class="date">Wednesday 12th March</p>
+    <h3>Prince Of Persia</h3>
+    <p class="date">Friday 20th February</p>
+  </div>
+</div>

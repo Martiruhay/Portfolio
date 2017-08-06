@@ -41,6 +41,11 @@ body {
   clear: both;
 }
 
+::selection {
+  background: $highlight;
+  color: black;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, li {
   color: $dark;
 }
@@ -68,7 +73,7 @@ p, li {
   line-height: 1.75;
 }
 p, ul, ol {
-  margin: 0 0 1.2em 0;
+  margin: 0 0 1.6em 0;
 }
 
 #main_navigation {
@@ -80,10 +85,11 @@ p, ul, ol {
     letter-spacing: 3px;
     text-transform: uppercase;
     border: 2px solid $border;
-    padding: 1rem;
+    padding: 1.5rem;
     text-decoration: none;
     color: $dark;
     float: left;
+    border-radius: 50%;
   }
 }
 nav {
