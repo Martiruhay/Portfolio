@@ -24,7 +24,11 @@
       &amp;summary=<%= @post.content.truncate(255) %>" target="blank">
       <i class="fa fa-linkedin"></i></a>
   </div>
+  
   <hr>
+  
+  <%= render 'disqus' %>
+  
 </div>
 
 <%= link_to "Edit", edit_post_path(@post) %>
