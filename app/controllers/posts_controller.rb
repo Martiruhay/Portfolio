@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   
-  # before action 
+  # before action
   
   def index
     # Will paginate(?)
@@ -22,15 +22,15 @@ class PostsController < ApplicationController
   end
   
   def show
-    @post = Post.find(params[:id])
+    find_post
   end
   
   def edit
-    @post = Post.find(params[:id])
+    find_post
   end
   
   def update
-    @post = Post.find(params[:id])
+    find_post
     if @post.update post_params
       redirect_to @post, notice: "Post updated successfully!"
     else
@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   end
   
   def destroy
-    @post = Post.find(params[:id])
+    find_post
     @post.destroy
     redirect_to posts_path
   end
@@ -49,12 +49,11 @@ class PostsController < ApplicationController
   private
   
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, :slug)
   end
   
-  # Refactor pending
-  # def find_post
-  #   @post = Post.find(params[:id])
-  # end
+  def find_post
+    @post = Post.friendly.find(params[:id])
+  end
   
 end
