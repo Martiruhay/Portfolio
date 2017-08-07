@@ -24,6 +24,36 @@
   }
 }
 
+// Pagination
+
+.pagination {
+  text-align: center;
+  margin: 0 0 3em 0;
+  a, .previous_page, .current, .next_page {
+    padding: .75em 1em;
+    margin: 0 .5em;
+    border-radius: .15em;
+    line-height: 20px;
+    text-decoration: none;
+    background: white;
+    font-weight: 700;
+    font-size: .7em;
+    font-style: normal;
+    color: $dark;
+    &:hover {
+      background: $highlight;
+      color: white;
+    }
+  }
+  .current {
+    background: $highlight;
+    color: white;
+  }
+  .disabled, .disabled:hover {
+    color: #B0B0B0;
+    background: white;
+  }
+}
 
 // Post Show
 
