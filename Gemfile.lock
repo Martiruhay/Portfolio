@@ -81,6 +81,8 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     puma (3.9.1)
+    pygments.rb (1.1.2)
+      multi_json (>= 1.0.0)
     rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -111,6 +113,7 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    redcarpet (3.4.0)
     sass (3.5.1)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -164,7 +167,9 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   puma (~> 3.0)
+  pygments.rb
   rails (~> 5.0.4)
+  redcarpet
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
