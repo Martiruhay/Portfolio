@@ -31,6 +31,7 @@ class PostsController < ApplicationController
   
   def update
     find_post
+    #@post.slug = nil
     if @post.update post_params
       redirect_to @post, notice: "Post updated successfully!"
     else
