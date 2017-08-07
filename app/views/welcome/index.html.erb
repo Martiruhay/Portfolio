@@ -20,9 +20,11 @@
   <div class="col-3 homepage-content">
     <h2>Projects I built</h2>
     <hr>
-    <h3>Glitch Grid</h3>
-    <p class="date">Wednesday 12th March</p>
-    <h3>Prince Of Persia</h3>
-    <p class="date">Friday 20th February</p>
+    
+    <% @projects.each do |project| %>
+      <h3><%= link_to project.title, project %></h3>
+      <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
+    
   </div>
 </div>

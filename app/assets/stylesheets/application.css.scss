@@ -124,7 +124,7 @@ hr {
 }
 
 #main_footer {
-  padding: 2.5em 5%;
+  padding: 2.5em 5% 4em;
   border-top: 1px solid $border;
   .copyright {
     float: left;
@@ -171,7 +171,20 @@ input[type="submit"], .button {
   &:hover {
     border: 2px solid $highlight;
     color: $highlight;
+    cursor: pointer;
   }
+}
+
+.project-button {
+  background: $highlight;
+  text-decoration: none;
+  color: white;
+  padding: 1em 2em;
+}
+
+.button-wrapper {
+  margin: 4em 0 0 0;
+  text-align: center;
 }
 
 @import 'welcome';
