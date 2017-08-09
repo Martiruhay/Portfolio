@@ -1,4 +1,4 @@
-<%= form_for @project do |f| %>
+<%= form_for @project, html: { multipart: true } do |f| %>
   
   <% if @project.errors.any? %>
     <h2><%= pluralize @project.errors.count, "error" %> prevented this project from saving:</h2>
@@ -11,6 +11,12 @@
   
   <%= f.label :title %><br>
   <%= f.text_field :title %>
+  
+  <br>
+  <br>
+  
+  <%= f.label :image %><br>
+  <%= f.file_field :image, class: "inputfile" %>
   
   <br>
   <br>

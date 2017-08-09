@@ -171,6 +171,10 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   padding: 1em;
   margin: .5em 0 2em 0;
 }
+input[type="file"] {
+  margin: .5em 0 2em 0;
+  cursor: pointer;
+}
 
 textarea {
   min-height: 20em;
