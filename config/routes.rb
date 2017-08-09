@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
   
+  # Magic trick to redirect any non covered route to root
+  get '*path' => redirect('/')
+  
 end
