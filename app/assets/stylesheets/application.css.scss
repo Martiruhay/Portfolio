@@ -45,6 +45,19 @@ body {
   display: none;
 }
 
+// Flash messages
+.notice, .alert {
+  text-align: center;
+  padding: .8em 0;
+  border-bottom: 1px solid $border;
+}
+.notice {
+  background: #aaeeff;
+}
+.alert {
+  background: #ffaaaa;
+}
+
 ::selection {
   background: $highlight;
   color: black;
