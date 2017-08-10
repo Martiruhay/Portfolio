@@ -1,12 +1,13 @@
 <div class="wrapper clearfix">
-  <div class="col-1 homepage-content">
+  <div class="col-1 homepage-content about">
     <h2>About</h2>
     <hr>
-    <%= image_tag 'pepe.png', size: "100x100" %>
-    <p>I am a software engineering student, a shitty developer and an indie 
-    videogame developer in the free time.</p>
-    <p>I also love music, being my favourite styles Black and Progressive Metal</p>
-    <p>... bla bla bla...</p>
+    <%= image_tag 'mitra.jpg', size: "128x128" %>
+    <p>Hi, it's Martí.</p>
+    <p>I'm a software engineering student, learning web and videogame development 
+    in the free time.</p>
+    <p>I also love music, being my favourite genres Progressive and Black Metal.</p>
+    <p>I also love my dog Sindar, he's such a good boy.</p>
   </div>
   <div class="col-2 homepage-content">
     <h2>Things I write</h2>
@@ -17,6 +18,8 @@
       <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
     <% end %>
     
+    <%= link_to ">> See all posts", posts_path %>
+    
   </div>
   <div class="col-3 homepage-content">
     <h2>Things I build</h2>
@@ -26,6 +29,8 @@
       <h3><%= link_to project.title, project %></h3>
       <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
     <% end %>
+    
+    <%= link_to ">> See all projects", projects_path %>
     
   </div>
 </div>
