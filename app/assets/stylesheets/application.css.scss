@@ -2,7 +2,9 @@
 
 $dark: #424242;
 $light: #9a9a9a;
-$highlight: #8bc6db;
+// $highlight: #8bc6db;
+$highlight: #ffda60;  // Aquest color mola pel hichlight, però no pel hover
+$hover: #ba8e00;
 $border: #e9e9e9;
 
 
@@ -107,6 +109,9 @@ p, ul, ol {
     color: $dark;
     float: left;
     border-radius: 50%;
+    &:hover {
+      border: 2px solid $highlight;
+    }
   }
 }
 nav {
@@ -118,18 +123,18 @@ nav {
     font-size: 1rem;
     color: $dark;
     &:hover {
-      color: $highlight;
+      color: $hover;
     }
   }
 }
 
 hr {
-  width: 3em;
+  width: 50%;
   display: block;
   height: 2px;
   border: 0;
   border-top: 2px solid $highlight;
-  margin: 2rem 0;
+  margin: 1rem 0 2rem 0;
 }
 
 #page_title {
@@ -156,7 +161,7 @@ hr {
     margin-left: 1em;
     padding-top: .2em;
     &:hover {
-      color: $highlight;
+      color: $hover;
     }
   }
   
@@ -191,13 +196,13 @@ input[type="submit"], .button {
   padding: 1em 2em;
   &:hover {
     border: 2px solid $highlight;
-    color: $highlight;
+    color: $hover;
     cursor: pointer;
   }
 }
 
 .project-button {
-  background: $highlight;
+  background: $hover;
   text-decoration: none;
   color: white;
   padding: 1em 2em;
