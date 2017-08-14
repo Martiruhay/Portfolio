@@ -20,4 +20,9 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, options).render(content).html_safe
   end
   
+  
+  def check_admin
+    redirect_to root_path if !user_signed_in?
+  end
+  
 end

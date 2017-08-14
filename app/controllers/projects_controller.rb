@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
+  include ApplicationHelper
   
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :check_admin, except: [:index, :show]
   
   def index
     @projects = Project.all.order("created_at desc").paginate(page: params[:page], per_page: 7)
