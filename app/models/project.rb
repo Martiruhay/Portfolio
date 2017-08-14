@@ -7,4 +7,8 @@ class Project < ApplicationRecord
     styles: { medium: "400x400>", small: "200x200>"}
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   
+  def should_generate_new_friendly_id?
+    true
+  end
+  
 end
