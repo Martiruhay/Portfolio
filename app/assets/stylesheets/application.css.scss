@@ -2,8 +2,7 @@
 
 $dark: #424242;
 $light: #9a9a9a;
-// $highlight: #8bc6db;
-$highlight: #ffda60;  // Aquest color mola pel hichlight, però no pel hover
+$highlight: #8bc6db;
 $hover: #ba8e00;
 $border: #e9e9e9;
 
@@ -155,6 +154,7 @@ hr {
 #main_footer {
   padding: 2.5em 5% 4em;
   border-top: 1px solid $border;
+  background: $custom_lighter;
   .copyright {
     float: left;
     font-size: .9em;
@@ -209,7 +209,8 @@ input[type="submit"], .button {
 }
 
 .project-button {
-  background: $hover;
+  //background: $custom_dark;
+  background: $highlight;
   text-decoration: none;
   color: white;
   padding: 1em 2em;
