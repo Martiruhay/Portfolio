@@ -5,6 +5,10 @@
     <hr>
   </header>
   
+  <% if @post.image.present? %>
+    <%= image_tag @post.image.url(:medium) %>
+  <% end %>
+  
   <div id="content">
     <p><%= markdown @post.content %></p>
   </div>
