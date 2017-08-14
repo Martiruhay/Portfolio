@@ -1,5 +1,5 @@
 #posts_wrapper {
-  padding: 3em 0;
+  padding: 2em 0;
   .post {
     text-align: center;
     .date {
@@ -17,6 +17,9 @@
           color: $custom_darker;
         }
       }
+    }
+    img {
+      margin-top: 2em;
     }
     hr {
       margin: 3em auto;
