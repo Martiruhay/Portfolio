@@ -7,6 +7,12 @@ $highlight: #ffda60;  // Aquest color mola pel hichlight, però no pel hover
 $hover: #ba8e00;
 $border: #e9e9e9;
 
+$custom_lighter: #FFFCF0;
+$custom_light: #FFE583;
+$custom_base: #FAD032;
+$custom_dark: #CFA400;
+$custom_darker: #937400;
+
 
 *{
   //background-color: rgba(0,0,0,0.1);
@@ -61,7 +67,7 @@ body {
 }
 
 ::selection {
-  background: $highlight;
+  background: $custom_light;
   color: black;
 }
 
@@ -98,6 +104,7 @@ p, ul, ol {
 #main_navigation {
   padding: 2.5em 5%;
   border-bottom: 1px solid $border;
+  background: $custom_lighter;
   .name {
     font-weight: 700;
     font-size: .8em;
@@ -110,7 +117,7 @@ p, ul, ol {
     float: left;
     border-radius: 50%;
     &:hover {
-      border: 2px solid $highlight;
+      border: 2px solid $custom_base;
     }
   }
 }
@@ -123,7 +130,7 @@ nav {
     font-size: 1rem;
     color: $dark;
     &:hover {
-      color: $hover;
+      color: $custom_darker;
     }
   }
 }
@@ -133,7 +140,7 @@ hr {
   display: block;
   height: 2px;
   border: 0;
-  border-top: 2px solid $highlight;
+  border-top: 2px solid $custom_base;
   margin: 1rem 0 2rem 0;
 }
 
@@ -161,7 +168,7 @@ hr {
     margin-left: 1em;
     padding-top: .2em;
     &:hover {
-      color: $hover;
+      color: $custom_darker;
     }
   }
   
@@ -195,8 +202,8 @@ input[type="submit"], .button {
   text-decoration: none;
   padding: 1em 2em;
   &:hover {
-    border: 2px solid $highlight;
-    color: $hover;
+    border: 2px solid $custom_darker;
+    color: $custom_darker;
     cursor: pointer;
   }
 }

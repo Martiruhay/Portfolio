@@ -14,7 +14,7 @@
         text-decoration: none;
         color: $dark;
         &:hover {
-          color: $hover;
+          color: $custom_darker;
         }
       }
     }
@@ -92,7 +92,7 @@
     color: $dark;
     padding: 1em 1em;
     &:hover {
-      color: $hover;
+      color: $custom_darker;
       cursor: pointer;
     }
   }
