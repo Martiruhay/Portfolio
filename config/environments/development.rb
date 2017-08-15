@@ -59,6 +59,7 @@ Rails.application.configure do
     path: "_dev/:class/:attachment/:style/:slug.:extension",
     s3_host_name: "s3-#{ENV['AWS_REGION']}.amazonaws.com",
     s3_region: ENV['AWS_REGION'],
+    s3_protocol: :https,
     s3_credentials: {
       bucket: ENV['S3_BUCKET_NAME'],
       access_key_id: ENV['AWS_ACCESS_KEY_ID'],
