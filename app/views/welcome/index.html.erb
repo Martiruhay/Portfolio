@@ -14,8 +14,11 @@
     <hr>
     
     <% @posts.each do |post| %>
+    
       <h3><%= link_to post.title, post %></h3>
+      
       <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+      
     <% end %>
     
     <%= link_to ">> See all posts", posts_path %>
@@ -26,8 +29,17 @@
     <hr>
     
     <% @projects.each do |project| %>
-      <h3><%= link_to project.title, project %></h3>
-      <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+      <div class="project">
+        <h3><%= link_to project.title, project %></h3>
+        
+        <% if project.image.present? %>
+          <%= link_to (image_tag project.image.url(:small)), project %>
+        <% end %>
+        
+        <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+        
+      </div>
+      
     <% end %>
     
     <%= link_to ">> See all projects", projects_path %>

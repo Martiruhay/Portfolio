@@ -1,5 +1,6 @@
 .col-1, .col-2, .col-3 {
   // LMAO
+  margin-bottom: 1em;
 }
 
 .col-1 {
@@ -45,10 +46,20 @@
 .about {
   padding: 0 7.5% 0 0;
   a {
+    color: $highlight;
     font-weight: 700;
     text-decoration: none;
   }
   img {
     margin: 0 0 1em 0;
+  }
+}
+
+.project {
+  margin: 0 0 2em 0;
+  img {
+    margin: 0 0 0 0;
+    padding: 0;
+    display: block;
   }
 }
