@@ -1,0 +1,18 @@
+<h1 id="page_title">My games</h1>
+
+<div id="posts_wrapper" class="skinny-wrapper">
+  
+  <% @games.each do |game| %>
+    <div class="post">
+      <p class="date"><%= game.created_at.strftime('%A, %B %d') %></p>
+      <h2><%= link_to game.name, game %></h2>
+      <% if game.image1.present? %>
+        <%= link_to (image_tag game.image1.url(:medium)), game %>
+      <% end %>
+      <hr>
+    </div>
+  <% end %>
+  
+</div>
+
+<%= will_paginate @games %>

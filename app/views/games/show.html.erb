@@ -1,0 +1,40 @@
+<div id="post_show_content" class="skinny-wrapper wrapper-padding">
+  <header>
+    <p class="date"><%= @game.created_at.strftime('%A, %B %d') %></p>
+    <h1><%= @game.name %></h1>
+    <hr>
+  </header>
+  
+  <div id="content">
+    
+    <% if @game.image1.present? %>
+      <%= image_tag @game.image1.url(:medium) %>
+    <% end %>
+    <% if @game.image2.present? %>
+      <%= image_tag @game.image2.url(:medium) %>
+    <% end %>
+    <% if @game.image3.present? %>
+      <%= image_tag @game.image3.url(:medium) %>
+    <% end %>
+    
+    <%= markdown @game.description %>
+    
+    <iframe src='https://www.youtube.com/embed/<%= @game.video_url %>/?rel=0&autoplay=0' frameborder='0' allowfullscreen></iframe>
+    
+    <div class="button-wrapper">
+      <a href="<%= @game.link %>" class="project-button" target="blank">
+        Visit <%= @game.name %>
+      </a>
+    </div>
+  </div>
+  
+  <% if user_signed_in? %>
+    <div id="admin_links">
+      <%= link_to "Edit", edit_game_path(@game) %>
+      <%= link_to "Delete", game_path(@game), method: :delete, 
+            data: { confirm: "Are you sure you want to delete this game?"} %>
+    </div>
+  <% end %>
+  
+  <hr>
+</div>

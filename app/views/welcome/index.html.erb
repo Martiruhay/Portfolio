@@ -9,21 +9,30 @@
     <p>I love music, being my favourite genres Progressive and Black Metal.</p>
     <p>I also love my dog Sindar, he's such a good boy.</p>
   </div>
+  
+  <%#= GAMES %>
   <div class="col-2 homepage-content">
-    <h2>Posts</h2>
+    <h2>Projects</h2>
     <hr>
     
-    <% @posts.each do |post| %>
-    
-      <h3><%= link_to post.title, post %></h3>
-      
-      <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+    <% @projects.each do |project| %>
+      <div class="project">
+        <h3><%= link_to project.title, project %></h3>
+        
+        <% if project.image.present? %>
+          <%= link_to (image_tag project.image.url(:small)), project %>
+        <% end %>
+        
+        <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+        
+      </div>
       
     <% end %>
     
-    <%= link_to ">> See all posts", posts_path %>
-    
+    <%= link_to ">> See all projects", projects_path %>
   </div>
+  
+  <%#= PROJECTS %>
   <div class="col-3 homepage-content">
     <h2>Projects</h2>
     <hr>
@@ -43,6 +52,22 @@
     <% end %>
     
     <%= link_to ">> See all projects", projects_path %>
+  </div>
+  
+  <%#= POSTS %>
+  <div class="col-4 homepage-content">
+    <h2>Posts</h2>
+    <hr>
+    
+    <% @posts.each do |post| %>
+    
+      <h3><%= link_to post.title, post %></h3>
+      
+      <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+      
+    <% end %>
+    
+    <%= link_to ">> See all posts", posts_path %>
     
   </div>
 </div>
