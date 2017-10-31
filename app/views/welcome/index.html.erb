@@ -2,7 +2,7 @@
   <div class="col-1 homepage-content about">
     <h2>About</h2>
     <hr>
-    <%= image_tag 'mitra.jpg', size: "128x128" %>
+    <%= image_tag 'mitra.jpg', size: "256x256" %>
     <p>Hi, it's Martí.</p>
     <p>I'm a software engineering student, learning web and videogame development 
     in the free time.</p>
@@ -12,29 +12,29 @@
   
   <%#= GAMES %>
   <div class="col-2 homepage-content">
-    <h2>Projects</h2>
+    <h2><%= link_to "Games", games_path %></h2>
     <hr>
     
-    <% @projects.each do |project| %>
+    <% @games.each do |game| %>
       <div class="project">
-        <h3><%= link_to project.title, project %></h3>
+        <h3><%= link_to game.name, game %></h3>
         
-        <% if project.image.present? %>
-          <%= link_to (image_tag project.image.url(:small)), project %>
+        <% if game.image1.present? %>
+          <%= link_to (image_tag game.image1.url(:small)), game %>
         <% end %>
         
-        <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+        <p class="date"><%= game.created_at.strftime("%A, %b %d") %></p>
         
       </div>
       
     <% end %>
     
-    <%= link_to ">> See all projects", projects_path %>
+    <%= link_to ">> See all games", games_path %>
   </div>
   
   <%#= PROJECTS %>
   <div class="col-3 homepage-content">
-    <h2>Projects</h2>
+    <h2><%= link_to "Projects", projects_path %></h2>
     <hr>
     
     <% @projects.each do |project| %>
@@ -56,7 +56,7 @@
   
   <%#= POSTS %>
   <div class="col-4 homepage-content">
-    <h2>Posts</h2>
+    <h2><%= link_to "Posts", posts_path %></h2>
     <hr>
     
     <% @posts.each do |post| %>
