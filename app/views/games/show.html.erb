@@ -8,13 +8,13 @@
   <div id="content">
     
     <% if @game.image1.present? %>
-      <%= image_tag @game.image1.url(:medium) %>
+      <%= image_tag @game.image1.url(:big) %>
     <% end %>
     <% if @game.image2.present? %>
-      <%= image_tag @game.image2.url(:medium) %>
+      <%= image_tag @game.image2.url(:big) %>
     <% end %>
     <% if @game.image3.present? %>
-      <%= image_tag @game.image3.url(:medium) %>
+      <%= image_tag @game.image3.url(:big) %>
     <% end %>
     
     <%= markdown @game.description %>
