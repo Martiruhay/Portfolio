@@ -12,10 +12,28 @@ $custom_base: #FAD032;
 $custom_dark: #CFA400;
 $custom_darker: #937400;
 
+// Set to something for the image to appear
+$WORK_IN_PROGRESS: "jaja yes";
+
 
 *{
   //background-color: rgba(0,0,0,0.1);
   box-sizing: border-box;
+}
+
+// WORK IN PROGRESS
+@if $WORK_IN_PROGRESS != "" {
+  #wip_cover{
+      position:fixed;
+      top:25%;
+      left:25%;
+      //background:rgba(0,0,0,0.4);
+      z-index:5;
+      width:42%;
+      height:42%;
+      display:block;
+      opacity: 0.9;
+  }
 }
 
 
