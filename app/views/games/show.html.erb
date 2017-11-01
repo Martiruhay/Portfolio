@@ -20,15 +20,19 @@
     <%= markdown @game.description %>
     
     <%#= VIDEO %>
-    <div class="game-video">
-      <iframe src='https://www.youtube.com/embed/<%= @game.video_id %>/?rel=0&autoplay=0' frameborder='0' allowfullscreen width="640" height="360"></iframe>      
-    </div>
+    <% if @game.video_id != "" %>
+      <div class="game-video">
+        <iframe src='https://www.youtube.com/embed/<%= @game.video_id %>/?rel=0&autoplay=0' frameborder='0' allowfullscreen width="640" height="360"></iframe>      
+      </div>
+    <% end %>
     
-    <div class="button-wrapper">
-      <a href="<%= @game.link %>" class="project-button" target="blank">
-        Visit <%= @game.name %>
-      </a>
-    </div>
+    <% if @game.link != "" %>
+      <div class="button-wrapper">
+        <a href="<%= @game.link %>" class="project-button" target="blank">
+          Play <%= @game.name %>!
+        </a>
+      </div>
+    <% end %>
   </div>
   
   <% if user_signed_in? %>
